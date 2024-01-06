@@ -562,3 +562,437 @@ git push git-demo master
 修改后重新push
 
 ![image-20240105232728928](images/git.assets/image-20240105232728928.png)
+
+ssh更稳定一些
+
+![image-20240105232928637](images/git.assets/image-20240105232928637.png)
+
+
+
+修改为相对路径后github上的笔记图片也不可以看
+
+![image-20240105234021379](images/git.assets/image-20240105234021379.png)
+
+我直接在github上的编辑markdown笔记发现路径是相对路径
+
+![image-20240105234125920](images/git.assets/image-20240105234125920.png)
+
+![image-20240105234203712](images/git.assets/image-20240105234203712.png)
+
+不明白为什么显示不出来（坑）
+
+
+
+
+
+## CLone远程仓库到本地库
+
+* 需要注意的是Clone、是完完全全将远程库的信息完全copy到本地库上
+* pull 是拉去不同的代码进行整合
+
+> 命令
+
+```shell
+git clone <项目地址>
+```
+
+
+
+实验 ： 在新的目录中拉去该项目
+
+![image-20240105234554925](images/git.assets/image-20240105234554925.png)
+
+![image-20240105234627510](images/git.assets/image-20240105234627510.png)
+
+
+
+![image-20240106000715186](images/git.assets/image-20240106000715186.png)
+
+查看本地库
+
+![image-20240106000805724](images/git.assets/image-20240106000805724.png)
+
+![image-20240106000821759](images/git.assets/image-20240106000821759.png)
+
+很顺利
+
+* CLone所作的事情1.拉去代码2.初始化本地仓库，3.创建别名
+
+![image-20240106001628470](images/git.assets/image-20240106001628470.png)
+
+
+
+## 团队内协作邀请成员到项目中
+
+![image-20240106002346866](images/git.assets/image-20240106002346866.png)
+
+![image-20240106002445358](images/git.assets/image-20240106002445358.png)
+
+![image-20240106002502428](images/git.assets/image-20240106002502428.png)
+
+![image-20240106002602909](images/git.assets/image-20240106002602909.png)
+
+![image-20240106002636480](images/git.assets/image-20240106002636480.png)
+
+复制发给邀请的人，别人点击pending invite邀请连接同意就可以加入到项目中了
+
+## 跨团队协作
+
+fork -pullrequest
+
+# 17 IDEA——GIT
+
+## 配置git.ignore 文件
+
+![image-20240106004533712](images/git.assets/image-20240106004533712.png)
+
+
+
+在C:user/实际用户下，创建git.ignore文件
+
+我的电脑是![image-20240106004843004](images/git.assets/image-20240106004843004.png)
+
+新建
+
+![image-20240106005027949](images/git.assets/image-20240106005027949.png)
+
+记事本打开编写一下内容
+
+![image-20240106005428553](images/git.assets/image-20240106005428553.png)
+
+```shell
+## .gitignore for Grails 1.2 and 1.3
+
+# .gitignore for maven 
+target/
+*.releaseBackup
+
+# web application files
+#/web-app/WEB-INF
+
+# IDE support files
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
+# default HSQL database files for production mode
+/prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+/stacktrace.log
+/test/reports
+/logs
+*.log
+*.log.*
+
+# project release file
+/*.war
+
+# plugin release file
+/*.zip
+/*.zip.sha1
+ 
+# older plugin install locations
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
+ 
+# "temporary" build files
+target/
+out/
+build/
+ 
+# other
+*.iws
+ 
+#.gitignore for java
+*.class
+ 
+# Package Files #
+*.jar
+*.war
+*.ear
+ 
+## .gitignore for eclipse
+ 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+ 
+# External tool builders
+.externalToolBuilders/
+ 
+# Locally stored "Eclipse launch configurations"
+*.launch
+ 
+# CDT-specific
+.cproject
+ 
+# PDT-specific
+.buildpath
+ 
+## .gitignore for intellij
+ 
+*.iml
+*.ipr
+*.iws
+.idea/
+ 
+## .gitignore for linux
+.*
+!.gitignore
+!.gitattributes
+!.editorconfig
+!.eslintrc
+!.travis.yml
+*~
+ 
+## .gitignore for windows
+ 
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+ 
+# Folder config file
+Desktop.ini
+ 
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+ 
+## .gitignore for mac os x
+ 
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+ 
+ 
+# Thumbnails
+._*
+ 
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+## hack for graddle wrapper
+!wrapper/*.jar
+!**/wrapper/*.jar
+```
+
+完事之后在.gitconfig文件（忽略文件同级目录下）引用忽略配置文件
+
+格式为
+
+```shell
+[core]
+    xecludesfile =  C:/Users/xxx/git.ignore    
+```
+
+* 需要注意的是，在引用全局配置中引用git.ignore文件 路径的斜杠（/）
+
+![image-20240106005919852](images/git.assets/image-20240106005919852.png)
+
+## Idea
+
+创建maven项目测试
+
+![image-20240106124227815](images/git.assets/image-20240106124227815.png)
+
+![image-20240106124408745](images/git.assets/image-20240106124408745.png)
+
+![image-20240106124438800](images/git.assets/image-20240106124438800.png)
+
+新版的idea会自动识别电脑上的git，不能自动识别的话手动添加一个到git.exe文件下，点击test会提示git版本信息
+
+
+
+初始化本地仓库，也就是让该项目由git管理
+
+此时查看文件没有.git文件，可以看出项目并没有被git所管理，当然可以在该位置git bash ```git init``不在赘述
+
+![image-20240106124901977](images/git.assets/image-20240106124901977.png)
+
+在idea中点击VSC---->
+
+![image-20240106125133371](images/git.assets/image-20240106125133371.png)
+
+![image-20240106125154652](images/git.assets/image-20240106125154652.png)
+
+默认就在该项目下创建本地库
+
+![image-20240106125238789](images/git.assets/image-20240106125238789.png)
+
+![image-20240106125255908](images/git.assets/image-20240106125255908.png)
+
+说明该项目已经被git管理
+
+添加到缓存区 git add.
+
+![image-20240106125453801](images/git.assets/image-20240106125453801.png)
+
+文件颜色变绿色 说明加入到了暂存区
+
+![image-20240106125535635](images/git.assets/image-20240106125535635.png)
+
+
+
+添加到本地库
+
+写点东西提交报本地库
+
+![image-20240106125942414](images/git.assets/image-20240106125942414.png)
+
+![image-20240106130102790](images/git.assets/image-20240106130102790.png)
+
+先git add. 在git commit
+
+![image-20240106130242377](images/git.assets/image-20240106130242377.png) 
+
+![image-20240106130620470](images/git.assets/image-20240106130620470.png)
+
+![image-20240106130707679](images/git.assets/image-20240106130707679.png)
+
+颜色变成看正常的颜色
+
+
+
+> 切换版本
+
+多提交几次先
+
+![image-20240106130830438](images/git.assets/image-20240106130830438.png)
+
+![image-20240106131400608](images/git.assets/image-20240106131400608.png)
+
+当由多个文件改变的时候，可以从整个项目中添加到暂存区
+
+![image-20240106130920183](images/git.assets/image-20240106130920183.png)
+
+![image-20240106131640323](images/git.assets/image-20240106131640323.png)
+
+查看版本信息点击VersionContral ----->log
+
+![image-20240106132013810](images/git.assets/image-20240106132013810.png)
+
+![image-20240106132342607](images/git.assets/image-20240106132342607.png)
+
+切换版本 
+
+在想要选择的版本单机右键选择checkout revision ”xxxx“
+
+![image-20240106132456712](images/git.assets/image-20240106132456712.png)
+
+![image-20240106132600312](images/git.assets/image-20240106132600312.png)
+
+切换成功，代码也回到之前的代码了
+
+切换回去 同上
+
+![image-20240106132724529](images/git.assets/image-20240106132724529.png)
+
+
+
+> 分支
+
+![image-20240106135817575](images/git.assets/image-20240106135817575.png)
+
+![image-20240106135903239](images/git.assets/image-20240106135903239.png)
+
+![image-20240106135921357](images/git.assets/image-20240106135921357.png)
+
+创建分支会复制master分支内容
+
+> 合并分支
+
+* 没有冲突的情况下，也就是master内容不改变，只修改分支内容没然后合并
+
+修改分支内容
+
+![image-20240106140417960](images/git.assets/image-20240106140417960.png)
+
+不要忘记提交
+
+合并需要先切换到主分支上 
+
+```shell
+git checkout master 
+git merge hot-fix
+```
+
+idea 操作
+
+![image-20240106141020819](images/git.assets/image-20240106141020819.png)
+
+合并成功
+
+![image-20240106141107366](images/git.assets/image-20240106141107366.png)
+
+
+
+**合并冲突**
+
+分支在master基础上修改的同时， master也修改
+
+![image-20240106141625432](images/git.assets/image-20240106141625432.png)
+
+commit master
+
+![image-20240106141841109](images/git.assets/image-20240106141841109.png)
+
+commit hot-fix
+
+合并
+
+![image-20240106142058663](images/git.assets/image-20240106142058663.png)
+
+？？？ 怎么没冲突
+
+
+
+![image-20240106142639614](images/git.assets/image-20240106142639614.png)
+
+需要手动合并
+
+显示出都修改的地方
+
+![image-20240106142813880](images/git.assets/image-20240106142813880.png)
+
+![image-20240106142946008](images/git.assets/image-20240106142946008.png)
+
+> idea中绑定github账号
+
+![image-20240106143804460](images/git.assets/image-20240106143804460.png)
+
+有浏览器github授权还有token授权选择其一
+
+![image-20240106143849290](images/git.assets/image-20240106143849290.png)
+
+
+
+> 使用idea分享代码到github
+
+正常情况是在github上创建新项目，在本地初始化git项目，写项目，push 到github上
+
+使用idea如何操作呢
+
+VSC->github->share
