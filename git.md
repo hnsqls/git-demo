@@ -6,13 +6,13 @@
 
 ## 2.集中式版本控制
 
-![image-20231230095410586](images\git.assets\image-20231230095410586.png)
+![image-20231230095410586](images/git.assets/image-20231230095410586.png)
 
 
 
 ## 3.分布式版本控制
 
-![image-20231230095610821](images\git.assets\image-20231230095610821.png)
+![image-20231230095610821](images/git.assets/image-20231230095610821.png)
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-![image-20231230095729830](images\git.assets\image-20231230095729830.png)
+![image-20231230095729830](images/git.assets/image-20231230095729830.png)
 
 
 
@@ -41,7 +41,7 @@
 git config -l    #git 所有的配置
 ```
 
-![image-20231230103457761](images\git.assets\image-20231230103457761.png)
+![image-20231230103457761](images/git.assets/image-20231230103457761.png)
 
 
 
@@ -49,13 +49,13 @@ git config -l    #git 所有的配置
 git config --system --list #系统配置
 ```
 
-![image-20231230103723553](images\git.assets\image-20231230103723553.png)
+![image-20231230103723553](images/git.assets/image-20231230103723553.png)
 
 ```shell
 git config --global --list  #用户配置
 ```
 
-![image-20231230103904010](images\git.assets\image-20231230103904010.png)
+![image-20231230103904010](images/git.assets/image-20231230103904010.png)
 
 
 
@@ -63,11 +63,11 @@ git config --global --list  #用户配置
 
 1) GIT\etc\gitconfig          --system
 
-![image-20240102182832719](images\git.assets\image-20240102182832719.png)
+![image-20240102182832719](images/git.assets/image-20240102182832719.png)
 
 1)C:user\Administrato\\. gitconfig         当前用户的
 
-![image-20240102182733744](images\git.assets\image-20240102182733744.png)
+![image-20240102182733744](images/git.assets/image-20240102182733744.png)
 
 ![image-20240102182746862](images\git.assets\image-20240102182746862.png)
 
@@ -90,15 +90,15 @@ git config --global user.emial "2661108038@qq.com"
 
 GIT有四个工作区域，工作区（Working Directory），缓存区（Stage/index），本地仓库（GIt Directory），远程仓库（Remote Directory）
 
-![image-20240102184122233](images\git.assets\image-20240102184122233.png)
+![image-20240102184122233](images/git.assets/image-20240102184122233.png)
 
-![image-20240102184850614](images\git.assets\image-20240102184850614.png)
+![image-20240102184850614](images/git.assets/image-20240102184850614.png)
 
 
 
 > 工作流程
 
-![image-20240102185256766](images\git.assets\image-20240102185256766.png)
+![image-20240102185256766](images/git.assets/image-20240102185256766.png)
 
 
 
@@ -106,7 +106,7 @@ GIT有四个工作区域，工作区（Working Directory），缓存区（Stage/
 
 > 创建工作目录与常用指令
 
-![image-20240102185455111](images\git.assets\image-20240102185455111.png)
+![image-20240102185455111](images/git.assets/image-20240102185455111.png)
 
 
 
@@ -134,11 +134,11 @@ git clone [url]
 
 # 6.GIT 文件状态
 
-![image-20240102191742161](images\git.assets\image-20240102191742161.png)
+![image-20240102191742161](images/git.assets/image-20240102191742161.png)
 
-![image-20240102193306323](images\git.assets\image-20240102193306323.png)
+![image-20240102193306323](images/git.assets/image-20240102193306323.png)
 
-![image-20240102194258664](images\git.assets\image-20240102194258664.png)
+![image-20240102194258664](images/git.assets/image-20240102194258664.png)
 
 
 
@@ -154,7 +154,7 @@ ssh-keygen -t rsa
 
 
 
-![image-20240102200345345](images\git.assets\image-20240102200345345.png)
+![image-20240102200345345](images/git.assets/image-20240102200345345.png)
 
 
 
