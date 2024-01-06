@@ -1,6 +1,6 @@
 # 1.版本控制
 
-![image-20231230094903920](images\git.assets\image-20231230094903920.png)
+![image-20231230094903920](images/git.assets/image-20231230094903920.png)
 
 ## 1.本地版本控制
 
